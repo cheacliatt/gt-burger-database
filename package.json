@@ -1,0 +1,25 @@
+{
+  "name": "gt-burger-database",
+  "version": "1.0.0",
+  "description": "To keep track of all the burgers you've eaten.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cheacliatt/gt-burger-database.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cheacliatt/gt-burger-database/issues"
+  },
+  "homepage": "https://github.com/cheacliatt/gt-burger-database#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-handlebars": "^5.0.0",
+    "mysql": "^2.18.1"
+  }
+}

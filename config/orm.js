@@ -1,5 +1,3 @@
-var connection = require("../config/connection.js");
-
 // Import MySQL connection.
 var connection = require("../config/connection.js");
 
@@ -41,6 +39,7 @@ function objToSql(ob) {
   return arr.toString();
 }
 
+// Object for all our SQL statement functions.
 var orm = {
     selectAll: function(tableInput, cb) {
       var queryString = "SELECT * FROM " + tableInput + ";";
@@ -71,7 +70,7 @@ var orm = {
         cb(result);
       });
     },
-    // An example of objColVals would be {name: panther, sleepy: true}
+    // An example of objColVals would be {burger_name: Veggie Burger, devoured: true}
     updateOne: function(table, objColVals, condition, cb) {
       var queryString = "UPDATE " + table;
   
@@ -91,6 +90,6 @@ var orm = {
     }
   };
   
-  // Export the orm object for the model (cat.js).
+  // Export the orm object for the model (burger.js).
   module.exports = orm;
   

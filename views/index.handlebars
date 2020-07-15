@@ -5,6 +5,7 @@
 <ul>
   {{#each burgers}}
     {{#unless devoured}}
+    {{!-- This connects to the partials folder, specially burgers-block --}}
       {{> burgers/burger-block devour=true}}
     {{/unless}}
   {{/each}}
@@ -15,6 +16,7 @@
 <ul>
   {{#each burgers}}
     {{#if devoured}}
+    {{!-- This connects to the partials folder, specially burgers-block --}}
       {{> burgers/burger-block devour=false}}
     {{/if}}
   {{/each}}

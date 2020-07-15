@@ -2,7 +2,7 @@
 const mysql = require("mysql");
 let connection;
 
-
+// JawsDB set up as a Heroku addon
 if (process.env.JAWSDB_URL) {
   connection = mysql.createConnection(process.env.JAWSDB_URL);
 } else {
@@ -11,12 +11,12 @@ if (process.env.JAWSDB_URL) {
     port: 3306,
     user: "root",
     password: "Flipen!!92",
-    database: "burgers_db"
+    database: "burgers_db",
   });
-};
+}
 
-// Make connection.
-connection.connect(function(err) {
+// Making the connection to server
+connection.connect((err) => {
   if (err) {
     console.error("error connecting: " + err.stack);
     return;
